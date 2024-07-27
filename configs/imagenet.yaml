@@ -1,0 +1,44 @@
+# logger options
+snapshot_save_iter: 10000     # How often do you want to save trained models
+log_iter: 10                  # How often do you want to log the training stats
+
+# optimization options
+max_iter: 50000               # maximum number of training iterations
+batch_size: 200               # batch size
+weight_decay: 0.0005          # weight decay
+beta1: 0.9                    # Adam parameter
+beta2: 0.999                  # Adam parameter
+init: kaiming                 # initialization [gaussian/kaiming/xavier/orthogonal]
+lr: 0.0001                    # initial learning rate, 0.0001 for adam, 0.001 for SGD
+lr_policy: step               # learning rate scheduler
+step_size: 30000              # how often to decay learning rate
+gamma: 0.1                    # how much to decay learning rate
+model_name: imagenet_256bit_sigmoid_kl10k_w1.0_w0.1_g8k_sparse           # model name
+hash_std_w: 1.0              # classification loss weight using hash codes
+hash_mask_w: 1.0             # classification loss weight using masked codes, 0.2 for imagenet100c, 1.0 for hard data
+GRM_w: 0.00001               # sparse loss weight of GRM
+align_w: 10000               # kl align loss weight, 1k, 10k or 100
+real_std_w: 1.0              # classification loss weight using real fea
+real_mask_w: 0.1             # classification loss weight using masked fea, should adjust accordingly
+sparse_w: 0.1                # sparseness control of codes, 0.1 for hard data, 0 for imagenet100c
+
+# model options
+model:
+  code_len: 256           # code length of hashing
+  class_num: 1000         # class num of dataset
+#  class_weights: None     # used for multi-label dataset, deal imbalance issue
+  thr_g: 8000             # sparseness threshold of GRM
+  is_sun: False           # SUN dataset or not
+  multi_label: False      # multi-label dataset or not
+#  weights_file: None      # path of pretrained alexnet classification model for sun dataset
+
+# data options
+input_dim: 3                                                # number of image channels [1 or 3]
+num_workers: 4                                              # number of data loading threads
+new_size: 256                                               # first resize the shortest image side to this size
+crop_image_height: 227                                      # random crop image of this height
+crop_image_width: 227                                       # random crop image of this width
+data_folder: /home/ouc/data1/qiaoshishi/datasets/ImageNet-150K/data_256/              # data root folder TODO resize offline
+train_list_file: train.txt                                  # train txt file name
+test_list_file: test.txt                                    # test txt file name
+filter_labels: []
