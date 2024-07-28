@@ -44,7 +44,9 @@ This operation will help you obtain the binary codes and annotations of the test
 
 ### Quantitative evaluation
 - Mutual information score (MIS) of binary codes
-- ```python compute_mutual_info_offline.py --class_num=100 --fea_dim=256 --sample_num=5000 --fea_file_path=/path/to/binary codes file --label_file_path=/path/to/annotation file --is_mat_file --is_sun?```
+- ```
+  python compute_mutual_info_offline.py --class_num=100 --fea_dim=256 --sample_num=5000 --fea_file_path=/path/to/binary codes file --label_file_path=/path/to/annotation file --is_mat_file --is_sun?
+  ```
 
 
 - Image retrieval mAP
