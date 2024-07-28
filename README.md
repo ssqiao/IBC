@@ -48,7 +48,7 @@ Examples
 - ```
   python fea_extraction.py --config=./configs/imagenet.yaml --checkpoint=./outputs/model_name/checkpoints/checkpoint_80000.pt --save_name feature_file_name
   ``` 
-This operation will help you obtain the binary codes and annotations of the test set in the format of .mat (Matlab).
+>>This operation will help you obtain the binary codes and annotations of the test set in the format of .mat (Matlab).
 
 ### Quantitative evaluation
 - Mutual information score (MIS) of binary codes
@@ -59,7 +59,7 @@ This operation will help you obtain the binary codes and annotations of the test
 
 - Image retrieval mAP
 
-We provide the Matlab evaluation codes for each dataset to compute the class-level retrieval, expert-bit class retrieval, 
+>>We provide the Matlab evaluation codes for each dataset to compute the class-level retrieval, expert-bit class retrieval, 
 and attribute retrieval (only for SUN-120K) mAP, which are 'dataset_name'_eval.m. Besides, before using customized bits
 for a target attribute retrieval, you need to use the simultaneously provided [NetDissect-Lite](https://github.com/ssqiao/IBC/tree/main/NetDissect-Lite-release-with-IBC) tool to dissect the 
 pretrained IBC model to obtain the indexes of used bits (interpreted filters' indexes) with similar semantic
@@ -67,7 +67,7 @@ meaning of that target attribute.
 
 - Network dissection tool usage
 
-Change the directory to [NetDissect-Lite](https://github.com/ssqiao/IBC/tree/main/NetDissect-Lite-release-with-IBC), modify 
+>>Change the directory to [NetDissect-Lite](https://github.com/ssqiao/IBC/tree/main/NetDissect-Lite-release-with-IBC), modify 
  settings of the model name, file paths, and so on in the settings.py, and run the following command:
 - ```
   python main.py
