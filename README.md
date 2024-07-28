@@ -66,6 +66,7 @@ pretrained IBC model to obtain the indexes of used bits (interpreted filters' in
 meaning of that target attribute. 
 
 - Network dissection tool usage
+
 Change the directory to [NetDissect-Lite](https://github.com/ssqiao/IBC/tree/main/NetDissect-Lite-release-with-IBC), modify 
  settings of the model name, file paths, and so on in the settings.py, and run the following command:
 - ```
