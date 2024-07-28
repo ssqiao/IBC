@@ -28,18 +28,26 @@ imagenet100.yaml, imagenet.yaml and sun_attr.yaml. You should change some settin
 
 Examples
 - Train the IBC model with ImageNet-150K.
-- ```python train.py --config=./configs/imagenet.yaml``` 
+- ```
+  python train.py --config=./configs/imagenet.yaml
+  ``` 
 
 - Train the IBC model with ImageNet-100C.
-- ```python train.py --config=./configs/imagenet100.yaml``` 
+- ```
+  python train.py --config=./configs/imagenet100.yaml
+  ``` 
 
 - Train the IBC model with SUN-120K.
-- ```python train.py --config=./configs/sun_attr.yaml``` 
+- ```
+  python train.py --config=./configs/sun_attr.yaml
+  ``` 
 
 
 ## Evaluation
 ### Binary codes extraction 
-- ```python fea_extraction.py --config=./configs/imagenet.yaml --checkpoint=./outputs/model_name/checkpoints/checkpoint_80000.pt --save_name feature_file_name``` 
+- ```
+  python fea_extraction.py --config=./configs/imagenet.yaml --checkpoint=./outputs/model_name/checkpoints/checkpoint_80000.pt --save_name feature_file_name
+  ``` 
 This operation will help you obtain the binary codes and annotations of the test set in the format of .mat (Matlab).
 
 ### Quantitative evaluation
@@ -60,7 +68,9 @@ meaning of that target attribute.
 - Network dissection tool usage
 Change the directory to [NetDissect-Lite](https://github.com/ssqiao/IBC/tree/main/NetDissect-Lite-release-with-IBC), modify 
  settings of the model name, file paths, and so on in the settings.py, and run the following command:
-- ```python main.py```
+- ```
+  python main.py
+  ```
 
 ### Pretrained 256-bit IBC models
 
