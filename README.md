@@ -3,7 +3,7 @@ Official Pytorch implementation of "Learning interpretable binary codes for cust
 
 The framework of our proposed method IBC:
 
-![Framework](framework.png)
+![image](framework.png)
 
 ## Requirements
 
